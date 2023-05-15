@@ -1,0 +1,5 @@
+build/bin/{{.BinaryName}} usr/bin
+{{- if eq .BinaryName "gozebro" }}
+build/deb/zebrocoin/completions/bash/gozebro etc/bash_completion.d
+build/deb/zebrocoin/completions/zsh/_gozebro usr/share/zsh/vendor-completions
+{{end -}}
