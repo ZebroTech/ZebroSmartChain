@@ -40,17 +40,18 @@ Proof-of-Work(PoW) provides some defense to 95% attack, with improved efficiency
 
 Proof-of-Work(PoW) increases the decentralization and favors community governance. 
 
-Zebrocoin ZEBRO total/maximum supply is capped by 10 Billion ZEBRO, 5 Billion out of 10 Billion ZEBROs will be locked forever to bridge-contracts to bridging ZEBRO to other 5 chains BSC, Polygon, Fantom, Phoenix and EtherGem blockchain. Maximum gas limit of block is set to 5 ZEBRO per block in favor of mining nodes.
+Zebrocoin ZEBRO total/maximum supply is capped by 10 Billion ZEBRO, 5 Billion out of 10 Billion ZEBROs will be locked forever to bridge-contracts to bridging ZEBRO to wZEBRO on BSC, Polygon, Fantom and Phoenix blockchain. Maximum gas limit of block is set to 5 ZEBRO per block in favor of mining nodes.
 
 All 10 Billion ZEBROs are allocated to Zebrocoin owner in genesis block to prevent inflation in maximum/circulation supply, miners can join network and mine for transaction fee.
 
 Zebro Smart Chain PoW consesus benefits:
 
 1. Blocks are produced by any miner node to mine for transaction fee upto 5ZEBRO per block.
-2. Miner nodes can use Ethereum's Ethhash consensus engine to mine blocks.
-3. All miner nodes are validators which gives Zebro Smart Chain 100% decentralized concept.
-4. Transaction fee will be changed according to market price to encourage ZEBRO miners and give ease to users in txn fee.
-5. Ethash Proof-of-Work(PoW) consensus engine will interact as an Etherem PoW concept.
+2. Regular Miner receives transaction fee from spender for mining of a block while Super Miner receives transaction fee from spender plus 100 ZEBRO from super_miner contract for mining of a block.
+3. Miner nodes can use Ethereum's Ethhash consensus engine to mine blocks.
+4. All miner nodes are validators which gives Zebro Smart Chain 100% decentralized concept.
+5. Transaction fee will be changed according to market price to encourage ZEBRO miners and give ease to users in txn fee.
+6. Ethash Proof-of-Work(PoW) consensus engine will interact as an Etherem PoW concept.
 
  
 ### Light Client of Zebro Smart Chain  
@@ -102,7 +103,7 @@ directory.
 
 |    Command    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  **`gozebro`**   | Main Zebro Smart Chain client binary. It is the entry point into the ZSC network (main-, test- or private net), capable of running as a full node (default), archive node (retaining all historical state) or a light node (retrieving data live). It has the same and more RPC and other interface as go-ethereum and can be used by other processes as a gateway into the BSC network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `gozebro --help` and the [CLI page](https://zebrocoin.app/docs/) for command line options.          |
+|  **`gozebro`**   | Main Zebro Smart Chain client binary. It is the entry point into the ZSC network (main-, test- or private net), capable of running as a full node (default), archive node (retaining all historical state) or a light node (retrieving data live). It has the same and more RPC and other interface as go-ethereum and can be used by other processes as a gateway into the ZSC network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `gozebro --help` and the [CLI page](https://zebrocoin.app/docs/) for command line options.          |
 |   `clef`      | Stand-alone signing tool, which can be used as a backend signer for `gozebro`.  |
 |   `devp2p`    | Utilities to interact with nodes on the networking layer, without running a full blockchain. |
 |   `abigen`    | Source code generator to convert Ethereum contract definitions into easy to use, compile-time type-safe Go packages. It operates on plain [Ethereum contract ABIs](https://docs.soliditylang.org/en/develop/abi-spec.html) with expanded functionality if the contract bytecode is also available. However, it also accepts Solidity source files, making development much more streamlined. Please see our [Native DApps](https://zebrocoin.app/docs/) page for details. |
@@ -253,7 +254,7 @@ can reuse the same connection for multiple requests!
 
 **Note: Please understand the security implications of opening up an HTTP/WS based
 transport before doing so! Hackers on the internet are actively trying to subvert
-BSC nodes with exposed APIs! Further, all browser tabs can access locally
+ZSC nodes with exposed APIs! Further, all browser tabs can access locally
 running web servers, so malicious web pages could try to subvert locally available
 APIs!**
 
@@ -275,7 +276,7 @@ To mine for block reward miner must run full node on server set_miner and send c
 Thank you for considering to help out with the source code! We welcome contributions
 from anyone on the internet, and are grateful for even the smallest of fixes!
 
-If you'd like to contribute to bsc, please fork, fix, commit and send a pull request
+If you'd like to contribute to zsc, please fork, fix, commit and send a pull request
 for the maintainers to review and merge into the main code base. If you wish to submit
 more complex changes though, please check up with the core devs first on [our discord channel](https://discord.gg/d6hAEbU8CG)
 to ensure those changes are in line with the general philosophy of the project and/or get
