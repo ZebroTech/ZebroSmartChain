@@ -26,6 +26,8 @@ Cross-chain transfer and other communication are possible due to native support 
 
 More details in [White Paper](https://zebrocoin.app/download/).
 
+
+
 ## Key features
 
 ### Supported Wallets
@@ -59,6 +61,8 @@ It contains two parts:
 1. [Stateless Precompiled contracts](https://github.com/ZebroTech/ZSC/blob/master/core/vm/contracts_lightclient.go) to do tendermint header verification and Merkle Proof verification.
 2. [Stateful solidity contracts](https://github.com/ZebroTech/zsc-genesis-contract/blob/master/contracts/TendermintLightClient.sol) to trusted appHash.  
 
+
+
 ## Native Token
 
 Zebrocoin ZEBRO will run on Zebro Smart Chain in the same way as ETH runs on Ethereum so that it remains as `native token` for ZSC. This means, 
@@ -66,6 +70,8 @@ ZEBRO will be used to:
 
 1. pay `gas` to deploy or invoke Smart Contract on ZSC
 2. perform cross-chain operations, such as transfer token assets across Zebro Smart Chain.
+
+
 
 ## Building the source
 
@@ -88,6 +94,7 @@ or, to build the full suite of utilities:
 make all
 ```
 
+
 ## Executables
 
 The zsc project comes with several wrappers/executables found in the `cmd`
@@ -102,6 +109,8 @@ directory.
 |  `bootnode`   | Stripped down version of our Ethereum client implementation that only takes part in the network node discovery protocol, but does not run any of the higher level application protocols. It can be used as a lightweight bootstrap node to aid in finding peers in private networks.                                                                                                                                                                                                                                                                 |
 |     `evm`     | Developer utility version of the EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode. Its purpose is to allow isolated, fine-grained debugging of EVM opcodes (e.g. `evm --code 60ff60ff --debug run`).                                                                                                                                                                                                                                                                     |
 |   `rlpdump`   | Developer utility tool to convert binary RLP ([Recursive Length Prefix](https://eth.wiki/en/fundamentals/rlp)) dumps (data encoding used by the Ethereum protocol both network as well as consensus wise) to user-friendlier hierarchical representation (e.g. `rlpdump --hex CE0183FFFFFFC4C304050583616263`).                                                                                                                                                                                                                                 |
+
+
 
 ## Running `gozebro`
 
@@ -134,7 +143,7 @@ This command will:
    This tool is optional and if you leave it out you can always attach to an already running
    `gozebro` instance with `gozebro attach`.
 
-### Run a Full node
+### Running a Full node
 
 Steps:
 
@@ -145,7 +154,7 @@ Steps:
 
 *Note: The default p2p port is 30311 and the RPC port is 8575 which is different from Ethereum.*
 
-More details about [running a node](https://zebrocoin.app/zsc/) and [becoming a miner](https://zebrocoin.app/mining/)
+More details about [running a node](https://zebrocoin.app/gozebro/) and [becoming a miner](https://zebrocoin.app/mining/)
 
 <!--https://zebrocoin.info/zsc/docs NO SUCH FILE-->
 
@@ -156,7 +165,7 @@ accounts, `gozebro` will by default correctly separate the two networks and will
 accounts available between them.*
 
 
-### Zebro Smart Chain (ZSC) genesis file
+### Gozebro genesis file
 gozebroGenesis.json
 
 ```shell
@@ -182,8 +191,14 @@ gozebroGenesis.json
 }
 ```
 ### Zebro Smart Chain (ZSC) enodes
-enode: "enode://e291b01ac57d9199b69405baff1a730d8c9bff7a8085b400b5353c165a0ac45b2e318063baf6c9c043033a5282649003e785c4abc83f6eb3cac3370c127ca455@167.86.104.54:30397?discport=0"
-
+enode1 
+```shell
+"enode://e291b01ac57d9199b69405baff1a730d8c9bff7a8085b400b5353c165a0ac45b2e318063baf6c9c043033a5282649003e785c4abc83f6eb3cac3370c127ca455@167.86.104.54:30397?discport=0"
+```
+enode2
+```shell
+"enode://29f2640f50cca2952deb5869ebcec011f52495c88130791144985bb8aa233bf15695c564b1d9a7f45bfd71b7d03ce1c662b2673d0086e60fc2de605dbbb873ac@144.91.88.149:57640?discport=0"
+```
 
 ### Configuration
 
@@ -242,6 +257,8 @@ BSC nodes with exposed APIs! Further, all browser tabs can access locally
 running web servers, so malicious web pages could try to subvert locally available
 APIs!**
 
+
+
 ## Mining ZEBRO
 Zebro Smart Chain (ZSC) is PoW Ethereum charecteristic blockchain with supply limit capped by 10 billion coins, all 10 billion coins were generated in block '0". Miners have 2 mining options 1 Regular Miner (mine for txn fee), 2 Super Miner (mine for block rewards).
 
@@ -250,6 +267,7 @@ To mine for txn fee miner must run a full node on server and set_miner. Regular 
 
 ### Super Miner (Mining for block reward)
 To mine for block reward miner must run full node on server set_miner and send colletoral 2 million ZEBRO from miner address to a contract on ZSC. Super miners get reward 100 ZEBRO per each block mined. This reward is not newly generated token but reward sent from contract to Super Miner for mining each block successfully. ZSC Block Timespan is 15 seconds, new block generated every 15 seconds.
+
 
 
 ## Contribution
@@ -277,6 +295,8 @@ Please make sure your contributions adhere to our coding guidelines:
 Please see the [Developers' Guide](https://zebrocoin.app/docs/)
 for more details on configuring your environment, managing project dependencies, and
 testing procedures.
+
+
 
 ## License
 
