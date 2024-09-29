@@ -24,7 +24,7 @@ Cross-chain transfer and other communication are possible due to native support 
 - **Interoperable**: Comes with efficient native chain communication; Optimized for scaling high-performance dApps that require fast and smooth user experience.
 - **Distributed with on-chain governance**: Proof of Work brings in decentralization and community participants. As the native token, ZEBRO will serve as both the gas of smart contract execution and tokens for staking.
 
-More details in [White Paper](https://zebrocoin.info/download/).
+More details in [White Paper](https://zebrocoin.app/download/).
 
 ## Key features
 
@@ -73,7 +73,7 @@ GoZebro is Go client to run ZSC node.
 
 Many of the below are the same as or similar to go-ethereum.
 
-For prerequisites and detailed build instructions please read the [Installation Instructions](https://gozebro.zebrocoin.info/docs/install-and-build/installing-gozebro).
+For prerequisites and detailed build instructions please read the [Installation Instructions](https://zebrocoin.app/docs/).
 
 Building `gozebro` requires both a Go (version 1.20 or later) and a C compiler. You can install
 them using your favourite package manager. Once the dependencies are installed, run
@@ -95,10 +95,10 @@ directory.
 
 |    Command    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  **`gozebro`**   | Main Zebro Smart Chain client binary. It is the entry point into the BSC network (main-, test- or private net), capable of running as a full node (default), archive node (retaining all historical state) or a light node (retrieving data live). It has the same and more RPC and other interface as go-ethereum and can be used by other processes as a gateway into the BSC network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `gozebro --help` and the [CLI page](https://gozebro.zebrocoin.info/docs/interface/command-line-options) for command line options.          |
+|  **`gozebro`**   | Main Zebro Smart Chain client binary. It is the entry point into the BSC network (main-, test- or private net), capable of running as a full node (default), archive node (retaining all historical state) or a light node (retrieving data live). It has the same and more RPC and other interface as go-ethereum and can be used by other processes as a gateway into the BSC network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `gozebro --help` and the [CLI page](https://zebrocoin.app/docs/) for command line options.          |
 |   `clef`      | Stand-alone signing tool, which can be used as a backend signer for `gozebro`.  |
 |   `devp2p`    | Utilities to interact with nodes on the networking layer, without running a full blockchain. |
-|   `abigen`    | Source code generator to convert Ethereum contract definitions into easy to use, compile-time type-safe Go packages. It operates on plain [Ethereum contract ABIs](https://docs.soliditylang.org/en/develop/abi-spec.html) with expanded functionality if the contract bytecode is also available. However, it also accepts Solidity source files, making development much more streamlined. Please see our [Native DApps](https://gozebro.zebrocoin.info/docs/dapp/native-bindings) page for details. |
+|   `abigen`    | Source code generator to convert Ethereum contract definitions into easy to use, compile-time type-safe Go packages. It operates on plain [Ethereum contract ABIs](https://docs.soliditylang.org/en/develop/abi-spec.html) with expanded functionality if the contract bytecode is also available. However, it also accepts Solidity source files, making development much more streamlined. Please see our [Native DApps](https://zebrocoin.app/docs/) page for details. |
 |  `bootnode`   | Stripped down version of our Ethereum client implementation that only takes part in the network node discovery protocol, but does not run any of the higher level application protocols. It can be used as a lightweight bootstrap node to aid in finding peers in private networks.                                                                                                                                                                                                                                                                 |
 |     `evm`     | Developer utility version of the EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode. Its purpose is to allow isolated, fine-grained debugging of EVM opcodes (e.g. `evm --code 60ff60ff --debug run`).                                                                                                                                                                                                                                                                     |
 |   `rlpdump`   | Developer utility tool to convert binary RLP ([Recursive Length Prefix](https://eth.wiki/en/fundamentals/rlp)) dumps (data encoding used by the Ethereum protocol both network as well as consensus wise) to user-friendlier hierarchical representation (e.g. `rlpdump --hex CE0183FFFFFFC4C304050583616263`).                                                                                                                                                                                                                                 |
@@ -106,7 +106,7 @@ directory.
 ## Running `gozebro`
 
 Going through all the possible command line flags is out of scope here (please consult our
-[CLI Wiki page](https://gozebro.zebrocoin.app/docs/)),
+[CLI Wiki page](https://zebrocoin.app/docs/)),
 but we've enumerated a few common parameter combos to get you up to speed quickly
 on how you can run your own `gozebro` instance.
 
@@ -130,7 +130,7 @@ This command will:
  * Start up `gozebro`'s built-in interactive [JavaScript console](https://geth.ethereum.org/docs/interface/javascript-console),
    (via the trailing `console` subcommand) through which you can interact using [`web3` methods](https://web3js.readthedocs.io/) 
    (note: the `web3` version bundled within `gozebro` is very old, and not up to date with official docs),
-   as well as `gozebro`'s own [management APIs](https://gozebro.zebrocoin.info/docs/rpc/server).
+   as well as `gozebro`'s own [management APIs](https://zebrocoin.info/docs/).
    This tool is optional and if you leave it out you can always attach to an already running
    `gozebro` instance with `gozebro attach`.
 
@@ -206,7 +206,7 @@ $ gozebro --your-favourite-flags dumpconfig
 As a developer, sooner rather than later you'll want to start interacting with `gozebro` and the
 Zebro Smart Chain network via your own programs and not manually through the console. To aid
 this, `gozebro` has built-in support for a JSON-RPC based APIs ([standard APIs](https://eth.wiki/json-rpc/API)
-and [`gozebro` specific APIs](https://gozebro.zebrocoin.info/docs/rpc/server)).
+and [`gozebro` specific APIs](https://zebrocoin.app/docs/r)).
 These can be exposed via HTTP, WebSockets and IPC (UNIX sockets on UNIX based
 platforms, and named pipes on Windows).
 
@@ -274,7 +274,7 @@ Please make sure your contributions adhere to our coding guidelines:
  * Commit messages should be prefixed with the package(s) they modify.
    * E.g. "eth, rpc: make trace configs optional"
 
-Please see the [Developers' Guide](https://gozebro.zebrocoin.info/docs/developers/devguide)
+Please see the [Developers' Guide](https://zebrocoin.app/docs/)
 for more details on configuring your environment, managing project dependencies, and
 testing procedures.
 
