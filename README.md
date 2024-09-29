@@ -212,6 +212,15 @@ BSC nodes with exposed APIs! Further, all browser tabs can access locally
 running web servers, so malicious web pages could try to subvert locally available
 APIs!**
 
+## Mining ZEBRO
+Zebro Smart Chain (ZSC) is PoW Ethereum charecteristic blockchain with supply limit capped by 10 billion coins, all 10 billion coins were generated in block '0". Miners have 2 mining options 1 Regular Miner (mine for txn fee), 2 Super Miner (mine for block rewards).
+### Regular Miner (Mining for txn fee)
+To mine for txn fee miner must run a full node on server and set_miner.
+
+### Super Miner (Mining for block reward)
+To mine for block reward miner must run full node on server set_miner and send colletoral 2 million ZEBRO from miner address to a contract on ZSC.
+
+
 ## Contribution
 
 Thank you for considering to help out with the source code! We welcome contributions
