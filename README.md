@@ -106,7 +106,7 @@ directory.
 ## Running `gozebro`
 
 Going through all the possible command line flags is out of scope here (please consult our
-[CLI Wiki page](https://gozebro.zebrocoin.info/docs/interface/command-line-options)),
+[CLI Wiki page](https://gozebro.zebrocoin.app/docs/)),
 but we've enumerated a few common parameter combos to get you up to speed quickly
 on how you can run your own `gozebro` instance.
 
@@ -114,9 +114,9 @@ on how you can run your own `gozebro` instance.
 
 The hardware must meet certain requirements to run a full node.
 - VPS running recent versions of Mac OS X or Linux.
-- 50GB of SSD storage for mainnet, 5G of SSD storage for testnet.
+- 100GB of SSD storage for mainnet, 5G of SSD storage for testnet.
 - 8 cores of CPU and 32 gigabytes of memory (RAM) for mainnet.
-- 4 cores of CPU and 8 gigabytes of memory (RAM) for testnet.
+- 1 or more static IP assigned to VPS.
 - A broadband Internet connection with upload/download speeds of at least 10 megabyte per second
 
 ```shell
@@ -134,7 +134,7 @@ This command will:
    This tool is optional and if you leave it out you can always attach to an already running
    `gozebro` instance with `gozebro attach`.
 
-### A Full node on the Rialto test network
+### Run a Full node
 
 Steps:
 
@@ -214,11 +214,12 @@ APIs!**
 
 ## Mining ZEBRO
 Zebro Smart Chain (ZSC) is PoW Ethereum charecteristic blockchain with supply limit capped by 10 billion coins, all 10 billion coins were generated in block '0". Miners have 2 mining options 1 Regular Miner (mine for txn fee), 2 Super Miner (mine for block rewards).
+
 ### Regular Miner (Mining for txn fee)
-To mine for txn fee miner must run a full node on server and set_miner.
+To mine for txn fee miner must run a full node on server and set_miner. Regular miners get txn fee for mining of a block with txn(s) in it. Currently txn fee is 0.00005 ZEBRO to 0.00021 ZEBRO per txn. Txn fees are paid by ZEBRO users for txns they made on ZSC.
 
 ### Super Miner (Mining for block reward)
-To mine for block reward miner must run full node on server set_miner and send colletoral 2 million ZEBRO from miner address to a contract on ZSC.
+To mine for block reward miner must run full node on server set_miner and send colletoral 2 million ZEBRO from miner address to a contract on ZSC. Super miners get reward 100 ZEBRO per each block mined. This reward is not newly generated token but reward sent from contract to Super Miner for mining each block successfully. ZSC Block Timespan is 15 seconds, new block generated every 15 seconds.
 
 
 ## Contribution
