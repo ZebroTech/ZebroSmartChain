@@ -264,10 +264,10 @@ APIs!**
 Zebro Smart Chain (ZSC) is PoW Ethereum charecteristic blockchain with supply limit capped by 10 billion coins, all 10 billion coins were generated in block '0". Miners have 2 mining options 1 Regular Miner (mine for txn fee), 2 Super Miner (mine for block rewards).
 
 ### Regular Miner (Mining for txn fee)
-To mine for txn fee miner must run a full node on server and set_miner. Regular miners get txn fee for mining of a block with txn(s) in it. Currently txn fee is 0.00005 ZEBRO to 0.00021 ZEBRO per txn. Txn fees are paid by ZEBRO users for txns they made on ZSC.
+To mine for txn fee miner must run a full node on server and set_miner. Regular miners get txn fee for mining of a block with txn(s) in it. Currently txn fee is 0.00005 ZEBRO to 5 ZEBRO per txn. Txn fees are paid by ZEBRO users for txns. ZSC Block Timespan is 30 seconds, new block generated every 30 seconds.
 
 ### Super Miner (Mining for block reward)
-To mine for block reward miner must run full node on server set_miner and send colletoral 2 million ZEBRO from miner address to a contract on ZSC. Super miners get reward 100 ZEBRO per each block mined. This reward is not newly generated token but reward sent from contract to Super Miner for mining each block successfully. ZSC Block Timespan is 15 seconds, new block generated every 15 seconds.
+To mine for block reward miner must run full node on server set_miner and send colletoral 2 million ZEBRO from miner address to a contract on ZSC. Super miners get reward 100 ZEBRO plus 0.00005 ZEBRO to 5 ZEBRO txn fee for each block mined. This reward is not newly generated token but reward sent from contract to Super Miner for mining each block successfully. ZSC Block Timespan is 30 seconds, new block generated every 30 seconds.
 
 
 
