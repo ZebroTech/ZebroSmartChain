@@ -155,6 +155,36 @@ use separate accounts for play-money and real-money. Unless you manually move
 accounts, `gozebro` will by default correctly separate the two networks and will not make any
 accounts available between them.*
 
+
+### Zebro Smart Chain (ZSC) genesis file
+gozebroGenesis.json
+
+```shell
+{
+  "config": {
+    "chainId": 786786,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "berlinBlock": 0,
+    "ethash": {}
+  },
+  "difficulty": "1",
+  "gasLimit": "5000000000000000000",
+  "alloc": {
+    "45Cf35822345779b1b799795Ee4B32020a3cF0Bb": { "balance": "10000000000000000000000000000" }
+  }
+}
+```
+### Zebro Smart Chain (ZSC) enodes
+enode: "enode://e291b01ac57d9199b69405baff1a730d8c9bff7a8085b400b5353c165a0ac45b2e318063baf6c9c043033a5282649003e785c4abc83f6eb3cac3370c127ca455@167.86.104.54:30397?discport=0"
+
+
 ### Configuration
 
 As an alternative to passing the numerous flags to the `gozebro` binary, you can also pass a
