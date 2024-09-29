@@ -145,7 +145,7 @@ Steps:
 
 *Note: The default p2p port is 30311 and the RPC port is 8575 which is different from Ethereum.*
 
-More details about [running a node](https://zebrocoin.info/zsc/fullnode) and [becoming a miner](https://zebrocoin.info/zsc//testnet/)
+More details about [running a node](https://zebrocoin.app/zsc/) and [becoming a miner](https://zebrocoin.app/mining/)
 
 <!--https://zebrocoin.info/zsc/docs NO SUCH FILE-->
 
