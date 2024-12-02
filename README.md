@@ -47,7 +47,7 @@ All 10 Billion ZEBROs are allocated to Zebrocoin owner in genesis block to preve
 Zebro Smart Chain PoW consesus benefits:
 
 1. Blocks are produced by any miner node to mine for transaction fee upto 5ZEBRO per block.
-2. Regular Miner receives transaction fee from spender for mining of a block while Super Miner receives transaction fee from spender plus 100 ZEBRO from super_miner contract for mining of a block.
+2. Regular Miner receives transaction fee from spender for mining of a block while Super Miner receives transaction fee from spender plus 100-500 ZEBRO from super_miner contract for mining of a block.
 3. Miner nodes can use Ethereum's Ethhash consensus engine to mine blocks.
 4. All miner nodes are validators which gives Zebro Smart Chain 100% decentralized concept.
 5. Transaction fee will be changed according to market price to encourage ZEBRO miners and give ease to users in txn fee.
@@ -267,7 +267,7 @@ Zebro Smart Chain (ZSC) is PoW Ethereum charecteristic blockchain with supply li
 To mine for txn fee miner must run a full node on server and set_miner. Regular miners get txn fee for mining of a block with txn(s) in it. Currently txn fee is 0.00005 ZEBRO to 5 ZEBRO per txn. Txn fees are paid by ZEBRO users for txns. ZSC Block Timespan is 30 seconds, new block generated every 30 seconds.
 
 ### Super Miner (Mining for block reward)
-To mine for block reward miner must run full node on server set_miner and send colletoral 2 million ZEBRO from miner address to a contract on ZSC. Super miners get reward 100 ZEBRO plus 0.00005 ZEBRO to 5 ZEBRO txn fee for each block mined. This reward is not newly generated token but reward sent from contract to Super Miner for mining each block successfully. ZSC Block Timespan is 30 seconds, new block generated every 30 seconds.
+To mine for block reward miner must run full node on server set_miner and send colletoral 2 million ZEBRO from miner address to a contract on ZSC. Super miners get reward 100-500 ZEBRO plus 0.00005 ZEBRO to 5 ZEBRO txn fee for each block mined. This reward is not newly generated token but reward sent from contract to Super Miner for mining each block successfully. ZSC Block Timespan is 30 seconds, new block generated every 30 seconds.
 
 
 
