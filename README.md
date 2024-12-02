@@ -2,7 +2,7 @@
 
 ![zsc](https://user-images.githubusercontent.com/32578764/227735463-774604d0-d53f-4cd1-b01d-1755146f693c.png)
 
-#### ZSC is ethereum based layer2 blockchain with Ethash fixed supply Proof of Work [PoW] consesus
+#### ZSC is ethereum based blockchain with Ethash fixed supply Proof of Work [PoW] consesus
 
 #### Go-Zebro is go client to run Zebro Smart Chain 
 
